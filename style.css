@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --sub-heading: hsl(276, 100%, 81%);
+  --left-chat: hsl(276, 55%, 52%);
+  --right-chat: hsl(271, 15%, 43%);
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+  --white: hsl(0, 0%, 100%);
+  --app-bg: hsl(270, 20%, 96%);
+  --submit-btn-bg: hsl(271, 36%, 24%);
+  --radio-btn-outline: hsl(289, 100%, 72%);
+  --gradient: linear-gradient(hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.main-container .main-content {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+}
+
+.main-container .main-content .bg-design {
+  position: absolute;
+  top: -45vh;
+  left: -40px;
+  width: 450px;
+  height: 134vh;
+  border-radius: 225px;
+  background: linear-gradient(40deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+/* TELEPHONE DESIGN*/
+
+.main-container .main-content .phone {
+  position: absolute;
+  top: 15vh;
+  left: 340px;
+  width: 250px;
+  height: 524px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 3px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.main-container .main-content .phone .phone-inner-container {
+  width: 100%;
+  height: 100%;
+  background: var(--app-bg);
+  border-radius: 14px;
+}
+
+.main-content .phone .phone-inner-container .phone-header {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(35deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  border-radius: 14px 14px 5px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone .phone-inner-container .phone-header .notch {
+  align-self: center;
+  width: 110px;
+  height: 18px;
+  background: var(--white);
+  border-radius: 0 0 12px 12px;
+  margin: -1px 10px 10px 10px;
+}
+
+.phone .phone-inner-container .phone-header .content {
+  display: flex;
+  width: 100%;
+  padding: 0 12px 10px;
+}
+
+.phone .phone-inner-container .phone-header .content .left {
+  display: flex;
+  width: calc(100% - 5px);
+}
+
+.phone-header .content i {
+  color: var(--white);
+  align-self: center;
+}
+
+.phone-header .content .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 10px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.phone-header .content .user p:nth-child(1) {
+  font-weight: 500;
+  color: var(--white);
+  padding-bottom: 3.5px;
+}
+
+.phone-header .content .user p:nth-child(2) {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--sub-heading);
+}
+
+.phone-header .content .dots {
+  justify-self: flex-end;
+  align-self: center;
+  width: 5px;
+}
+
+.phone-header .content .dots p {
+  color: var(--white);
+  letter-spacing: 1px;
+  transform: rotate(90deg);
+}
+
+.phone-inner-container .phone-chats {
+  padding: 13px 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-inner-container .phone-chats .chats {
+  font-size: 8.5px;
+  padding: 7px;
+  margin-bottom: 7px;
+  line-height: 12.5px;
+}
+
+.phone-inner-container .phone-chats .left-chat {
+  color: var(--left-chat);
+  background: rgba(204, 204, 204, 0.25);
+  align-self: flex-start;
+  letter-spacing: 0.2px;
+  width: 64%;
+  border-radius: 11px 11px 11px 5px;
+}
+
+.phone-inner-container .phone-chats .dog-img-wrapper {
+  display: flex;
+  align-self: flex-end;
+  width: 60%;
+  margin: 7px 14px 7px 7px;
+}
+
+.phone-inner-container .phone-chats .dog-img-wrapper img {
+  width: 33%;
+  height: auto;
+  margin-right: 7px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.phone-inner-container .phone-chats .right-chat {
+  align-self: flex-end;
+  background: var(--white);
+  color: var(--right-chat);
+  border-radius: 11px 11px 5px 11px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.phone-inner-container .phone-chats .right-chat:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.phone-inner-container .phone-chats .pricing {
+  background: linear-gradient(70deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-radius: 11px 11px 11px 5px;
+  margin-bottom: 7px;
+  padding: 7px 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 77%;
+}
+
+.phone-inner-container .phone-chats .pricing label {
+  align-self: center;
+}
+
+.phone-inner-container .phone-chats .pricing label span {
+  font-size: 8px;
+  color: rgba(250, 220, 225, 0.897);
+  margin-left: 4px;
+}
+
+.phone-inner-container .phone-chats input {
+  position: relative;
+  visibility: hidden;
+}
+
+.phone-inner-container .phone-chats .pricing label input[type="radio"]:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: transparent;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--radio-btn-outline);
+  transform: translateY(20%);
+  margin-right: 5px;
+  pointer-events: none;
+}
+
+.phone-inner-container
+  .phone-chats
+  .pricing
+  label
+  input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: rgba(250, 220, 225, 0.897);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--radio-btn-outline);
+}
+
+.phone-inner-container .phone-chats .pricing p {
+  color: var(--white);
+  margin-right: 3px;
+  font-weight: 500;
+  align-self: center;
+  transform: translateY(15%);
+}
+
+.phone-inner-container .phone-chats .message {
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 30px;
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone-inner-container .phone-chats .message p {
+  align-self: center;
+  color: #ccc;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.phone-inner-container .phone-chats .message .submit-btn {
+  width: 30px;
+  height: 29px;
+  border-radius: 50%;
+  background: var(--submit-btn-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.phone-inner-container .phone-chats .message .submit-btn i {
+  color: var(--white);
+  font-size: 12px;
+}
+
+.main-container .text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-container .text .content {
+  width: 420px;
+  transform: translateY(35vh);
+}
+
+.main-container .text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--main-heading);
+}
+
+.main-container .text p {
+  color: var(--paragraph);
+  line-height: 27px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* TELEPHONE DESIGN  XXXXXXXXXXXXXXX*/
+.attribution {
+  font-size: 20px;
+  padding: 0 0 10px 0;
+  color: var(--left-chat);
+}
+
+.attribution a {
+  color: rgba(119, 119, 119, 0.822);
+}
+
+/**MEDIA QUERIES***************/
+
+@media (max-width: 1200px) {
+  .main-container .main-content .bg-design {
+    left: -120px;
+  }
+
+  .main-container .main-content .phone {
+    left: 200px;
+  }
+  .attribution {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-container .main-content .bg-design {
+    left: -200px;
+  }
+
+  .main-container .main-content .phone {
+    left: 150px;
+  }
+  .attribution {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  .main-container {
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .main-container .main-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-container .main-content .bg-design {
+    left: -40px;
+  }
+
+  .main-container .main-content .phone {
+    left: 340px;
+  }
+
+  .main-container .text {
+    width: 70%;
+    height: 100vh;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .main-container .main-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-container .main-content .bg-design {
+    left: -140px;
+  }
+
+  .main-container .main-content .phone {
+    left: 240px;
+  }
+
+  .main-container .text {
+    width: 70%;
+    height: 100vh;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 30px;
+  }
+  .attribution {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container .main-content .bg-design {
+    left: -190px;
+  }
+
+  .main-container .main-content .phone {
+    left: 150px;
+  }
+
+  .main-container .text {
+    width: 70%;
+    height: 100vh;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-container {
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .main-container .main-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-container .main-content .bg-design {
+    left: -220px;
+  }
+
+  .main-container .main-content .phone {
+    left: 140px;
+  }
+
+  .main-container .text {
+    width: 100%;
+    height: 100vh;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .main-container .text h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--main-heading);
+  }
+
+  .main-container .text p {
+    color: var(--paragraph);
+    line-height: 27px;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .attribution {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 410px) {
+  .main-container {
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .main-container .main-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-container .main-content .bg-design {
+    left: -280px;
+  }
+
+  .main-container .main-content .phone {
+    left: 50px;
+    width: 240px;
+    height: 460px;
+  }
+
+  .phone .phone-inner-container .phone-header .notch {
+    height: 15px;
+  }
+
+  .phone-header .content .user {
+    padding: 4px 0 0 0;
+  }
+
+  .phone-header .content .user p:nth-child(1) {
+    font-size: 10px;
+  }
+
+  .phone-inner-container .phone-chats .chats {
+    font-size: 8px;
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 10.5px;
+  }
+
+  .phone-inner-container .phone-chats .left-chat {
+    width: 64%;
+  }
+}
